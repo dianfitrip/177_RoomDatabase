@@ -10,7 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 // 1. Import Tema yang benar (Sesuai file Theme.kt Anda)
 import com.example.myapplication.ui.theme.MyApplicationTheme
-// 2. Import SiswaApp (Sesuai lokasi file PetaNavigasi.kt)
+// 2. Import SiswaApp (Sesuai lokasi file PetaNavigasi.kt)..
 import com.example.myapplication.view.uicontroller.SiswaApp
 
 class MainActivity : ComponentActivity() {
