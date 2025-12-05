@@ -8,6 +8,9 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.myapplication.repository.AplikasiSiswa
 import com.example.myapplication.viewmodel.EntryViewModel
 import com.example.myapplication.viewmodel.HomeViewModel
+import androidx.lifecycle.createSavedStateHandle
+import com.example.myapplication.viewmodel.DetailViewModel // 2. Pastikan import ini ada
+import com.example.myapplication.viewmodel.EditViewModel
 
 object PenyediaViewModel {
     val Factory = viewModelFactory {
@@ -17,6 +20,18 @@ object PenyediaViewModel {
 
         initializer {
             EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
+        initializer {
+            DetailViewModel(
+                createSavedStateHandle(), // Mengambil argumen navigasi (idSiswa)
+                aplikasiSiswa().container.repositoriSiswa
+            )
+        }
+        initializer {
+            EditViewModel(
+                createSavedStateHandle(),
+                aplikasiSiswa().container.repositoriSiswa
+            )
         }
     }
 }
