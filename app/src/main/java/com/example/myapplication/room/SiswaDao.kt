@@ -5,6 +5,9 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
+//tambahii 2 import ini
+import androidx.room.Delete
+import androidx.room.Update
 
 @Dao
 interface SiswaDao {
